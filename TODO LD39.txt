@@ -9,12 +9,13 @@ x Battery / power orbs.
 x Make gun
 
 # Behaviors
-o Action to shoot at street lamps
- - Shooting at street lamps charges at set rate.
-o Action to shoot at ghosts.
-  - Shooting ghosts causes them to lose health.
-  - At 0 health ghosts die.
-  - Add health bar to ghosts.
+o Shooting (pressing trigger) at street lamps charges at set rate.
+  - charge is taken from player and given to lamp.
+o Shooting (pressing trigger) at ghosts causes them to lose health.
+  - charge is taken from player and used to damage ghost.
+o At 0 health ghosts die.
+o Add health bar to ghosts.
+o Reticle turns a color when pointing at street lamp or ghost.
 x Player - remaining power.
 x Houses spawn power orbs.
   - There can only be a max of N orbs at one time.
@@ -22,7 +23,7 @@ o Spawn ghosts where the lights are out.
   - Will spawn within a radius of the light.
 o Have ghosts move toward player.
 o On player collision with ghost, player takes damage.
-x Lights lose power after sa set amount of time 1 minute?
+x Lights lose power after a set amount of time 1 minute?
 
 # Environment
 x Make or find night-time skybox.
