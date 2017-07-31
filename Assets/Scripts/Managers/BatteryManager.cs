@@ -31,7 +31,7 @@ public class BatteryManager : MonoBehaviour
 
             // Looks like it's spawning batteries correctly,
             // need to have the batteries able to be consumed now.
-            //Debug.LogFormat("BatteryManager:: Randomly spawned battery at house {0}", houses[houseIndex].name);
+            Debug.LogFormat("BatteryManager:: Randomly spawned battery at house {0}", houses[houseIndex].name);
         }
     }
 
