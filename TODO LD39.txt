@@ -1,0 +1,39 @@
+TODO:
+
+# Modelling
+x Make or find house models.
+o Make street pieces (straight, curve, and T)
+x Make street lamp models
+o Make ghosts.
+x Battery / power orbs.
+x Make gun
+
+# Behaviors
+o Action to shoot at street lamps
+ - Shooting at street lamps charges at set rate.
+o Action to shoot at ghosts.
+  - Shooting ghosts causes them to lose health.
+  - At 0 health ghosts die.
+  - Add health bar to ghosts.
+x Player - remaining power.
+x Houses spawn power orbs.
+  - There can only be a max of N orbs at one time.
+o Spawn ghosts where the lights are out.
+  - Will spawn within a radius of the light.
+o Have ghosts move toward player.
+o On player collision with ghost, player takes damage.
+x Lights lose power after sa set amount of time 1 minute?
+
+# Environment
+x Make or find night-time skybox.
+x Bake lighting? Mixed lights. Real-time?
+x Add spotlights to street lights.
+
+# Tweaks
+x The spotlight color and light shape is ugly AF.
+x Add post-processing effects.
+
+# Sounds
+o Battery pickup sound.
+o Environment sound.
+o Ghost sounds.
