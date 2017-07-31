@@ -1,76 +1,94 @@
 fileFormatVersion: 2
-guid: 760838d0adfeb6e46a521bcc61fe7c15
-timeCreated: 1501454008
+guid: df56b45451948b4418f264c11f82efcb
+timeCreated: 1501454864
 licenseType: Pro
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
     100000: Chimney
-    100002: //RootNode
-    100004: House
+    100002: Floor
+    100004: //RootNode
     100006: House Colliders
-    100008: Plane
-    100010: Roof
-    100012: Walls
-    100014: Walls.001
-    100016: Walls.002
-    100018: Walls.003
-    100020: Walls.004
-    100022: Walls.005
-    100024: Walls.006
-    100026: Walls.007
-    100028: Walls.008
+    100008: Roof.Bottom
+    100010: Roof.Top
+    100012: Walls.001
+    100014: Walls.002
+    100016: Walls.003
+    100018: Walls.004
+    100020: Walls.006
+    100022: Walls.007
+    100024: Walls.008
+    100026: Walls.Ceiling
+    100028: Walls.Inside
+    100030: Walls.Outside
+    100032: Window Frame
+    100034: Window Glass
     400000: Chimney
-    400002: House
+    400002: Floor
     400004: //RootNode
     400006: House Colliders
-    400008: Plane
-    400010: Roof
-    400012: Walls
-    400014: Walls.001
-    400016: Walls.002
-    400018: Walls.003
-    400020: Walls.004
-    400022: Walls.005
-    400024: Walls.006
-    400026: Walls.007
-    400028: Walls.008
+    400008: Roof.Bottom
+    400010: Roof.Top
+    400012: Walls.001
+    400014: Walls.002
+    400016: Walls.003
+    400018: Walls.004
+    400020: Walls.006
+    400022: Walls.007
+    400024: Walls.008
+    400026: Walls.Ceiling
+    400028: Walls.Inside
+    400030: Walls.Outside
+    400032: Window Frame
+    400034: Window Glass
     2300000: Chimney
-    2300002: Plane
-    2300004: Roof
-    2300006: Walls
+    2300002: Floor
+    2300004: Roof.Bottom
+    2300006: Roof.Top
     2300008: Walls.001
     2300010: Walls.002
     2300012: Walls.003
     2300014: Walls.004
-    2300016: Walls.005
-    2300018: Walls.006
-    2300020: Walls.007
-    2300022: Walls.008
+    2300016: Walls.006
+    2300018: Walls.007
+    2300020: Walls.008
+    2300022: Walls.Ceiling
+    2300024: Walls.Inside
+    2300026: Walls.Outside
+    2300028: Window Frame
+    2300030: Window Glass
     3300000: Chimney
-    3300002: Plane
-    3300004: Roof
-    3300006: Walls
+    3300002: Floor
+    3300004: Roof.Bottom
+    3300006: Roof.Top
     3300008: Walls.001
     3300010: Walls.002
     3300012: Walls.003
     3300014: Walls.004
-    3300016: Walls.005
-    3300018: Walls.006
-    3300020: Walls.007
-    3300022: Walls.008
-    4300000: Plane
-    4300002: Walls.008
-    4300004: Walls.007
-    4300006: Walls.006
-    4300008: Walls.003
-    4300010: Walls.002
-    4300012: Walls.001
-    4300014: Walls.004
-    4300016: Walls.005
-    4300018: Chimney
-    4300020: Roof
-    4300022: Walls
+    3300016: Walls.006
+    3300018: Walls.007
+    3300020: Walls.008
+    3300022: Walls.Ceiling
+    3300024: Walls.Inside
+    3300026: Walls.Outside
+    3300028: Window Frame
+    3300030: Window Glass
+    4300000: Walls.008
+    4300002: Walls.007
+    4300004: Walls.006
+    4300006: Walls.003
+    4300008: Walls.002
+    4300010: Walls.001
+    4300012: Walls.004
+    4300014: Window Glass
+    4300016: Walls.Ceiling
+    4300018: Roof.Bottom
+    4300020: Walls.Outside
+    4300022: Floor
+    4300024: Window Frame
+    4300026: Chimney
+    4300028: Roof.Top
+    4300030: Walls.Inside
   materials:
     importMaterials: 1
     materialName: 0
