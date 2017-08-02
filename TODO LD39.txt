@@ -24,7 +24,7 @@ x Houses spawn power orbs.
   x There can only be a max of N orbs at one time.
 o Spawn ghosts where the lights are out.
   o Will spawn within a radius of the light.
-  o Have ghosts move toward player.
+  x Have ghosts move toward player.
 o On player collision with ghost, player takes damage.
 x Lights lose power after a set amount of time 1 minute?
 x Stop player draining power automatically.
