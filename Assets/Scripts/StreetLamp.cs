@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class StreetLamp : MonoBehaviour
+public class StreetLamp : MonoBehaviour, IPowerHolder
 {
     [Tooltip("Seconds for lamp to go dark.")]
     public float timeToDecay = 10f;
@@ -9,7 +9,9 @@ public class StreetLamp : MonoBehaviour
     new Light light;
 
     public AnimationCurve decayAnimation;
-    float currentPower = 100f;
+    [Tooltip("The maximum power stored, balance this with the power batteries give.")]
+    public float maxPower = 30f;
+    float currentPower = 30f;
 
     Material lightMatInstance;
     Color emissionColor;
@@ -19,7 +21,7 @@ public class StreetLamp : MonoBehaviour
     private void Awake()
     {
         light = GetComponentInChildren<Light>();
-        powerDecayRate = 100f / timeToDecay;
+        powerDecayRate = maxPower / timeToDecay;
         lightMatInstance = transform.Find("Lamp Light").GetComponent<MeshRenderer>().material;
         emissionColor = lightMatInstance.GetColor("_EmissionColor");
         powerLevelMatInstance = transform.Find("Power Level Indicator").GetComponent<MeshRenderer>().material;
@@ -33,19 +35,41 @@ public class StreetLamp : MonoBehaviour
 
     private void UpdateVisualsToMatchCurrentPower()
     {
-        float intensity = decayAnimation.Evaluate(currentPower / 100f);
+        float intensity = decayAnimation.Evaluate(currentPower / maxPower);
         light.intensity = intensity;
         lightMatInstance.SetColor("_EmissionColor", emissionColor * intensity);
         powerLevelMatInstance.SetFloat("_PowerLevel", intensity);
     }
 
+#region IPowerHolder
+
     public void GivePower(float power)
     {
-        currentPower = Mathf.Clamp(currentPower + power, 0f, 100f);
+        Debug.Log("We got power! " + power);
+        currentPower = Mathf.Clamp(currentPower + power, 0f, maxPower);
     }
 
-    public void TakePower(float power)
+    public float TakePower(float power)
     {
-        currentPower = Mathf.Clamp(currentPower - power, 0f, 100f);
+        float startPower = currentPower;
+        currentPower = Mathf.Clamp(currentPower - power, 0f, maxPower);
+        return currentPower - startPower;
     }
+
+    public float GetAmountDepleted()
+    {
+        return maxPower - currentPower;
+    }
+
+    public float GetCurrentPower()
+    {
+        return currentPower;
+    }
+
+    public float GetMaxPower()
+    {
+        return maxPower;
+    }
+
+#endregion
 }

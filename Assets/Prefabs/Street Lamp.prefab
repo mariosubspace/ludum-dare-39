@@ -539,7 +539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b19b636f9b62b048a9fd3130d5a4f8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDecay: 10
+  timeToDecay: 60
   decayAnimation:
     serializedVersion: 2
     m_Curve:
