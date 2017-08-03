@@ -37,7 +37,7 @@ public class PowerGunController : MonoBehaviour
 
             if (Input.GetMouseButton(0))
             {
-                var hitPowerHolder = hit.collider.gameObject.GetComponent<IPowerHolder>();
+                var hitPowerHolder = hit.collider.gameObject.GetComponent<PowerHolder>();
                 if (hitPowerHolder != null)
                 {
                     // Get the default amount to transfer.

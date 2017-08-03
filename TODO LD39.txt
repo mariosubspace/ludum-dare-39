@@ -14,10 +14,12 @@ o Lighting shooting out of gun effect / laser beam.
 # Behaviors
 x Shooting (pressing trigger) at street lamps charges at set rate.
   x charge is taken from player and given to lamp.
-o Shooting (pressing trigger) at ghosts causes them to lose health.
+x Shooting (pressing trigger) at ghosts causes them to lose health.
   o charge is taken from player and used to damage ghost.
-  o At 0 health ghosts die.
+  x At 0 health ghosts die.
   o Add health bar to ghosts.
+  o Add death animation.
+  o Add death sound.
 x Reticle turns a color when pointing at street lamp or ghost.
 x Player - remaining power.
 x Houses spawn power orbs.

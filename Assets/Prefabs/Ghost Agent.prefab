@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 195052025039598090}
   - component: {fileID: 136176927344081012}
   - component: {fileID: 114229370697191588}
+  - component: {fileID: 114255220334005326}
   m_Layer: 10
   m_Name: Ghost Agent
   m_TagString: Untagged
@@ -171,6 +172,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c373b56bb11d9e469de75af04978e72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114255220334005326
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1173133879656066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d25a7f1cb2cc74b4bbbb0f32afc6dea7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxPower: 0
+  maxHealth: 15
 --- !u!136 &136176927344081012
 CapsuleCollider:
   m_ObjectHideFlags: 1

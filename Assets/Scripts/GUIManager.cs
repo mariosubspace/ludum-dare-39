@@ -19,6 +19,6 @@ public class GUIManager : MonoBehaviour
 
     private void Update()
     {
-        SetPowerAmount(player.GetCurrentPowerLevel());
+        SetPowerAmount(player.GetCurrentPower());
     }
 }
