@@ -13,6 +13,8 @@ public class PowerGunController : MonoBehaviour
     [Tooltip("Amount of power to transfer per second.")]
     public float powerTransferRate = 10;
 
+    ArcGenerator arcGenerator;
+
     Transform exitPoint;
     Transform hitRaycastStart;
     Player player;
@@ -22,6 +24,7 @@ public class PowerGunController : MonoBehaviour
         player = GetComponentInParent<Player>();
         exitPoint = transform.Find("Exit Point");
         hitRaycastStart = transform.Find("Hit Raycast Start");
+        arcGenerator = transform.Find("Arc Generator").GetComponent<ArcGenerator>();
     }
 
     private void Update()
@@ -51,14 +54,29 @@ public class PowerGunController : MonoBehaviour
                     // The player might not have enough power, so we will save the actual amount taken.
                     float powerTaken = player.TakePower(powerRequest);
 
+                    if (Mathf.Approximately(powerTaken, 0f))
+                    {
+                        arcGenerator.TurnOff();
+                    }
+                    else
+                    {
+                        arcGenerator.SetTarget(hitPowerHolder.GetPowerSink());
+                        arcGenerator.TurnOn();
+                    }
+
                     // Transfer the power taken from the player to the hit PowerHolder.
                     hitPowerHolder.GivePower(powerTaken);
                 }
+            }
+            else
+            {
+                arcGenerator.TurnOff();
             }
         }
         else
         {
             reticle.color = Color.white;
+            arcGenerator.TurnOff();
         }
     }
 }

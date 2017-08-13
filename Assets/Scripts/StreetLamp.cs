@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class StreetLamp : PowerHolder
 {
@@ -13,6 +14,8 @@ public class StreetLamp : PowerHolder
 
     Material powerLevelMatInstance;
 
+    Transform powerSink;
+
     private void Awake()
     {
         light = GetComponentInChildren<Light>();
@@ -20,6 +23,7 @@ public class StreetLamp : PowerHolder
         lightMatInstance = transform.Find("Lamp Light").GetComponent<MeshRenderer>().material;
         emissionColor = lightMatInstance.GetColor("_EmissionColor");
         powerLevelMatInstance = transform.Find("Power Level Indicator").GetComponent<MeshRenderer>().material;
+        powerSink = transform.Find("Power Sink");
         SetToMaxPower();
     }
 
@@ -35,5 +39,10 @@ public class StreetLamp : PowerHolder
         light.intensity = intensity;
         lightMatInstance.SetColor("_EmissionColor", emissionColor * intensity);
         powerLevelMatInstance.SetFloat("_PowerLevel", intensity);
+    }
+
+    public override Transform GetPowerSink()
+    {
+        return powerSink;
     }
 }

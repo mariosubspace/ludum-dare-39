@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class PowerHolder : MonoBehaviour
+public abstract class PowerHolder : MonoBehaviour
 {
     public float maxPower;
     protected float currentPower;
@@ -77,4 +77,6 @@ public class PowerHolder : MonoBehaviour
     {
         currentPower = maxPower;
     }
+
+    public abstract Transform GetPowerSink();
 }

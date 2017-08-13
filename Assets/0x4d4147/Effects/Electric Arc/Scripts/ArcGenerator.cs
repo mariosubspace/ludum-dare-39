@@ -15,13 +15,38 @@ public class ArcGenerator : MonoBehaviour
 
     LineRenderer lineRenderer;
 
+    [SerializeField]
+    bool isOff = true;
+
     private void Awake()
     {
         lineRenderer = GetComponent<LineRenderer>();
     }
 
+    public void TurnOn()
+    {
+        isOff = false;
+    }
+
+    public void TurnOff()
+    {
+        isOff = true;
+    }
+
+    public void SetTarget(Transform target)
+    {
+        destination = target;
+    }
+
     private void Update()
     {
+        // Don't do anything if off or no destination is set.
+        if (isOff || destination == null)
+        {
+            lineRenderer.positionCount = 0;
+            return;
+        }
+
         // Calculate some stuff about the start and end positions.
         Vector3 desToSrc = transform.position - destination.position;
         float distance = desToSrc.magnitude;
