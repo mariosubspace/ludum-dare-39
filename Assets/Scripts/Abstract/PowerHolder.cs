@@ -72,4 +72,9 @@ public class PowerHolder : MonoBehaviour
     {
         return currentPower / maxPower;
     }
+
+    public void SetToMaxPower()
+    {
+        currentPower = maxPower;
+    }
 }

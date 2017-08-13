@@ -8,6 +8,8 @@ public class TargetPlayer : MonoBehaviour
     NavMeshAgent navMeshAgent;
     Player player;
 
+    public bool followPlayer = true;
+
     private void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
@@ -16,6 +18,7 @@ public class TargetPlayer : MonoBehaviour
 
     private void Update()
     {
+        if (!followPlayer) return;
         navMeshAgent.destination = player.transform.position;
     }
 }

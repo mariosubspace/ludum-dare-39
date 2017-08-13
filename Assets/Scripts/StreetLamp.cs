@@ -20,6 +20,7 @@ public class StreetLamp : PowerHolder
         lightMatInstance = transform.Find("Lamp Light").GetComponent<MeshRenderer>().material;
         emissionColor = lightMatInstance.GetColor("_EmissionColor");
         powerLevelMatInstance = transform.Find("Power Level Indicator").GetComponent<MeshRenderer>().material;
+        SetToMaxPower();
     }
 
     private void Update()
