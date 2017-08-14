@@ -9,13 +9,13 @@ x Battery / power orbs.
 x Make gun
 
 # Effects
-o Lighting shooting out of gun effect / laser beam.
+x Lighting shooting out of gun effect / laser beam.
 
 # Behaviors
 x Shooting (pressing trigger) at street lamps charges at set rate.
   x charge is taken from player and given to lamp.
 x Shooting (pressing trigger) at ghosts causes them to lose health.
-  o charge is taken from player and used to damage ghost.
+  x charge is taken from player and used to damage ghost.
   x At 0 health ghosts die.
   o Add health bar to ghosts.
   o Add death animation.
@@ -24,7 +24,7 @@ x Reticle turns a color when pointing at street lamp or ghost.
 x Player - remaining power.
 x Houses spawn power orbs.
   x There can only be a max of N orbs at one time.
-o Spawn ghosts where the lights are out.
+x Spawn ghosts where the lights are out.
   o Will spawn within a radius of the light.
   x Have ghosts move toward player.
 o On player collision with ghost, player takes damage.
@@ -44,3 +44,4 @@ x Add post-processing effects.
 o Battery pickup sound.
 o Environment sound.
 o Ghost sounds.
+o Electric Arc sound.

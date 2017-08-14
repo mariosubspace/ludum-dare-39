@@ -2295,48 +2295,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 623426266}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &629560311
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4011480983338176, guid: 5380e59b81d4f904d9f3e03371f057d3, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.69
-      objectReference: {fileID: 0}
-    - target: {fileID: 4011480983338176, guid: 5380e59b81d4f904d9f3e03371f057d3, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4011480983338176, guid: 5380e59b81d4f904d9f3e03371f057d3, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -9.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 4011480983338176, guid: 5380e59b81d4f904d9f3e03371f057d3, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4011480983338176, guid: 5380e59b81d4f904d9f3e03371f057d3, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0.8784187
-      objectReference: {fileID: 0}
-    - target: {fileID: 4011480983338176, guid: 5380e59b81d4f904d9f3e03371f057d3, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4011480983338176, guid: 5380e59b81d4f904d9f3e03371f057d3, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.47789192
-      objectReference: {fileID: 0}
-    - target: {fileID: 4011480983338176, guid: 5380e59b81d4f904d9f3e03371f057d3, type: 2}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 5380e59b81d4f904d9f3e03371f057d3, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1001 &683720992
 Prefab:
   m_ObjectHideFlags: 0
@@ -6043,7 +6001,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9cd0e1b1d3a1564380e946d28602b17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxPower: 100
+  maxPower: 500
 --- !u!1 &1584523442
 GameObject:
   m_ObjectHideFlags: 0
@@ -8651,7 +8609,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.75
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}

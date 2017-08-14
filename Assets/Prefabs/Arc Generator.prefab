@@ -96,7 +96,7 @@ MonoBehaviour:
   destination: {fileID: 0}
   divisionsPerUnit: 4
   bezierDistance: 1.5
-  displacementStrength: 0.08
+  displacementStrength: 0.2
   randomness: 0.5
   speed: 28
   isOff: 1

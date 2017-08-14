@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c373b56bb11d9e469de75af04978e72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followPlayer: 0
+  followPlayer: 1
 --- !u!114 &114255220334005326
 MonoBehaviour:
   m_ObjectHideFlags: 1
