@@ -3,6 +3,9 @@ TODO:
 # Modelling
 x Make or find house models.
 o Make street pieces (straight, curve, and T)
+  x Straight piece
+  o Curve piece
+  o T piece
 x Make street lamp models
 x Make ghosts.
 x Battery / power orbs.
@@ -18,8 +21,7 @@ x Shooting (pressing trigger) at ghosts causes them to lose health.
   x charge is taken from player and used to damage ghost.
   x At 0 health ghosts die.
   o Add health bar to ghosts.
-  o Add death animation.
-  o Add death sound.
+  o Add death animation ? Maybe just do a particle system POOF or something.
 x Reticle turns a color when pointing at street lamp or ghost.
 x Player - remaining power.
 x Houses spawn power orbs.
@@ -44,4 +46,7 @@ x Add post-processing effects.
 o Battery pickup sound.
 o Environment sound.
 o Ghost sounds.
+  o Ooooh sound, or some other sound.
+  o Ghost damage sound.
+  o Ghost death sound.
 o Electric Arc sound.
