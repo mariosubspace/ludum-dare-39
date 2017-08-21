@@ -26,7 +26,7 @@ Material:
     - _BorderWidthX: 0.0205
     - _BorderWidthY: 0.0884
     - _Brightness: 0.855
-    - _PowerLevel: 0.111
+    - _PowerLevel: 1
     - _RemainingPowerAmount: 0.0791
     - _ReminaingPowerAmount: 0.0299
     m_Colors:

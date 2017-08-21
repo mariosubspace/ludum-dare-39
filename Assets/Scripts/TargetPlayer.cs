@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 
 public class TargetPlayer : MonoBehaviour
@@ -14,13 +12,18 @@ public class TargetPlayer : MonoBehaviour
     private void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
+
         player = FindObjectOfType<Player>();
-        playerCollider = player.GetComponentInChildren<CapsuleCollider>();
+
+        if (player != null)
+            playerCollider = player.GetComponentInChildren<CapsuleCollider>();
+        else
+            Debug.LogWarning("TargetPlayer:: Could not find player, will not target player!");
     }
 
     private void Update()
     {
-        if (!followPlayer) return;
+        if (!followPlayer || player == null) return;
         navMeshAgent.destination = player.transform.position;
     }
 
