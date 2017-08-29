@@ -32,7 +32,10 @@ x Spawn ghosts where the lights are out.
      to be fine for now because nobody sees the ghosts spawn.
      or rather, there's a small chance they will.)
   x Have ghosts move toward player.
-o On player collision with ghost, player takes damage.
+x On player collision with ghost, player takes damage.
+o Introduce invulerability delay when player takes damage, 1 sec delay?
+o Show health bar.
+o Make graphic for power stuff?
 x Lights lose power after a set amount of time 1 minute?
 x Stop player draining power automatically.
 

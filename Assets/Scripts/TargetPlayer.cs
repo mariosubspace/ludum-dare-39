@@ -3,6 +3,8 @@ using UnityEngine.AI;
 
 public class TargetPlayer : MonoBehaviour
 {
+    public float attackStrength = 5f;
+
     NavMeshAgent navMeshAgent;
     Player player;
     Collider playerCollider;
@@ -31,9 +33,13 @@ public class TargetPlayer : MonoBehaviour
     {
         if (other == playerCollider)
         {
+            // Stop the ghost if colliding with player.
             navMeshAgent.destination = transform.position;
             navMeshAgent.isStopped = true;
             followPlayer = false;
+
+            // Attack the player.
+            player.HurtPlayer(attackStrength);
         }
     }
 
@@ -41,6 +47,7 @@ public class TargetPlayer : MonoBehaviour
     {
         if (other == playerCollider)
         {
+            // Start the ghost following player again.
             navMeshAgent.destination = transform.position;
             navMeshAgent.isStopped = false;
             followPlayer = true;

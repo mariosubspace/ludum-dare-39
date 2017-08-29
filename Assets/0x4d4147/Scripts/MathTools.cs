@@ -2,7 +2,7 @@
 
 namespace Mario
 {
-    public class MathTools : MonoBehaviour
+    public static class MathTools
     {
         /// <summary>
         /// Calculates a point along a Bezier curve defined by the four points and parameterized by t.
@@ -22,6 +22,16 @@ namespace Mario
             float fff = f * ff;
 
             return (fff * p0) + (3 * ff * t * p1) + (3 * f * tt * p2) + (ttt * p3);
+        }
+
+        public static float Min(float a, float b)
+        {
+            return a < b ? a : b;
+        }
+
+        public static float Max(float a, float b)
+        {
+            return a > b ? a : b;
         }
     }
 }
